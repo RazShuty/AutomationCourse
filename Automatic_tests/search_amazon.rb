@@ -16,7 +16,7 @@ class SearchAmazon
     @browser.find_element(:id, "twotabsearchtextbox").clear
     @browser.find_element(:id, "twotabsearchtextbox").send_keys item
     @browser.find_element(:css, "input.nav-submit-input").click
-    Assert.equals (@browser.find_elements(:xpath, "//div[@id='result_0']/ul/li/div/a/span[1]").text ,"EUR 139,00" , "This is not the price !!!" )
+    Assert.equals(@browser.find_elements(:xpath, "//div[@id='result_0']/ul/li/div/a/span[1]").text ,"EUR 139,00" , "This is not the price !!!" )
   end
 
   def verify_keyword_exists_in_title

@@ -13,14 +13,23 @@ class Browser
     @driver.get(url)
   end
 
-  def get_element(element)
-    results = @driver.find_elements(element)
+  def get_element(definition, element)
+    results = @driver.find_elements(definition, element)
     if results.length==0
-      return nill
+      return nil
     else
       return results
     end
   end
+
+  def get_title
+    @driver.title
+  end
+
+  def maximize
+    @driver.manage.window.maximize
+  end
+
 
   def close
     @driver.close
