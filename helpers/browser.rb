@@ -13,6 +13,15 @@ class Browser
     @driver.get(url)
   end
 
+  def get_element(element)
+    results = @driver.find_elements(element)
+    if results.length==0
+      return nill
+    else
+      return results
+    end
+  end
+
   def close
     @driver.close
   end
