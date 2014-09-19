@@ -14,29 +14,12 @@ class NewElements
   driver.find_element(:link, "Hilfe").click
   headline_title = driver.find_element(:css, "h1").text
   if headline_title == "Hilfe & Kundenservice"
-    puts "OK headline title"
+    puts "OK headline title2"
   else
     puts "Keine"
 
   end
 
-
-  if page_title == "Amazon.de: Günstige Preise für Elektronik & Foto, Filme, Musik, Bücher, Games, Spielzeug & mehr"
-    puts "OK"
-  else
-    puts "Keine"
-  end
-  if driver.find_elements(:id, "nav_cat_7").length == 1
-      puts "OK"
-
-      if (driver.find_element(:id, "nav_cat_7").text == "Bücher")
-        puts "OK"
-      else
-        puts "Keine"
-      end
-  else
-    puts "Keine"
-  end
 
 
   driver.find_element(:id, "twotabsearchtextbox").clear
